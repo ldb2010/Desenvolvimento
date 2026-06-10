@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Chinese Rocks Rg;
+  src: url("src/chinese\ rocks\ rg.otf");
+}
+
+
+body {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  font-family: Chinese Rocks Rg;
+  font-size: px;
+
+}
+
+#tche {
+  background-color: rgb(224, 151, 17);
+  border-radius: 5px;
+  border: 5px solid rgb(67, 45, 4);
+  text-align: center;
+  padding: 20px;
+}
+
+#logoHTML {
+  width: 250px;
+  height: auto;
+}
