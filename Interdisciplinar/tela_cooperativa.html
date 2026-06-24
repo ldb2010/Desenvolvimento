@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLTA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #004C94;
+            background-color: #004C94;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #CEC9E2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #023e76;
+            border-radius: 4px;
+        }
+        img{
+            display: flex;
+            width: 80%;
+            height: 200px;
+        }
+        button{
+            padding: 10px 20px;
+            margin: 5px;
+            border: 2px solid #023e76;
+            border-radius: 4px;
+            background-color: #023e76;
+            color: black;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #023e76;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+            <img src="src/LogoAzul.png" alt="Logo VOLTA">
+            <label for="username">Username:</label> <br>
+            <input type="text" id="username" placeholder="Username">
+            <br>
+            <label for="password">Password:</label> <br>
+            <input type="password" id="password" placeholder="Password">
+            <br>
+            <button type="submit" style="background-color: #004C94; border-radius: 8px;">Login</button>
+        </form>
+    </div>
+</body>
+</html>
