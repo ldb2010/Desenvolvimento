@@ -1,0 +1,494 @@
+/* ==========================
+   RESET
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+body {
+    background-color: #000000;
+    color: #217C3E;
+    padding-top: 90px;
+    line-height: 1.6;
+}
+
+/* ==========================
+   MENU
+========================== */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 1100px;
+
+    background-color: #000000;
+    border: 2px solid #217C3E;
+    border-radius: 20px;
+
+    padding: 15px;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #217C3E;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2AA344;
+    position: relative;
+    bottom: 10px;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+}
+
+header h1{
+    font-size:90px;
+    color:#217C3E;
+    margin:0;
+}
+
+header img{
+    width:350px;
+    border-radius:20px;
+    border:3px solid #217C3E;
+}
+
+/* ==========================
+   Sobre Mim
+========================== */
+
+.sobre-mim {
+    background-color: #217C3E;
+    color: #000000;
+    max-width: 100%;
+    height: 100vh;
+    padding: 96px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sobre-mim img{
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+}
+
+.sobre-mim img:hover {
+    content: url("assets_lucca/Captura de tela 2026-05-22 122529.png");
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    transition: 1s;
+}
+
+/* ==========================
+   INTERESSES
+========================== */
+
+.interesses{
+    width:100%;
+    padding:120px 8%;
+    background:#000;
+}
+
+.interesses > h2{
+    text-align:center;
+    font-size:50px;
+    color:#217C3E;
+}
+
+#interesses{
+    scroll-margin-top: 120px;
+}
+
+
+/* ==========================
+   JOGOS
+========================== */
+
+#jogos {
+    min-height: 100vh;
+    padding: 80px 60px;
+}
+
+
+#jogos h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+#jogos h3,
+#musicas h3,
+#esportes h3 {
+    font-size: 35px;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+
+
+#fotos {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    max-width:1300px;
+    margin:auto;
+}
+
+
+#fotos img {
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid #217C3E;
+    transition:.4s;
+}
+
+
+#fotos img:hover {
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:
+    0 0 25px #217C3E;
+}
+
+
+
+/* ==========================
+   MÚSICAS
+========================== */
+
+
+#musicas{
+    min-height:100vh;
+    padding:80px 60px;
+}
+
+
+.cards-musicas{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+
+.card{
+    width:230px;
+    height:320px;
+    padding:5px;
+    border-radius:20px;
+    position:relative;
+    z-index:1;
+}
+
+
+
+.card::after{
+    position:absolute;
+    content:"";
+    top:30px;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    filter:blur(25px);
+    transform:scale(.8);
+    transition:.5s;
+}
+
+
+
+.card-info{
+    background:#000;
+    width:100%;
+    height:100%;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+}
+
+
+
+.card-info img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+
+
+.card .title{
+    margin-top:20px;
+    text-align:center;
+    font-weight:bold;
+    letter-spacing:.1em;
+}
+
+
+
+.card:hover::after{
+    opacity:0;
+}
+
+
+.card:hover .card-info{
+    transform:translateY(-10px);
+    transition:.4s;
+}
+
+
+
+/* CORES DOS ÁLBUNS */
+
+
+.thriller,
+.thriller::after{
+
+    background:linear-gradient(#111,#E6D4A4);
+
+}
+
+
+.offwall,
+.offwall::after{
+
+    background:linear-gradient(#ff8800,#5093B6);
+
+}
+
+
+.blinding,
+.blinding::after{
+
+    background:linear-gradient(#ff003c,#ffd700);
+
+}
+
+
+.metallica,
+.metallica::after{
+
+    background:linear-gradient(#7B0519,#200E08);
+
+}
+
+
+.bad,
+.bad::after{
+
+    background:linear-gradient(#ffffff,#BE2E38);
+
+}
+
+
+.ram,
+.ram::after{
+
+    background:linear-gradient(#ffd700,#222);
+
+}
+
+
+.meteora,
+.meteora::after{
+
+    background:linear-gradient(#A69174,#111);
+
+}
+
+
+.acdc,
+.acdc::after{
+
+    background:linear-gradient(#0D1114,#6C7073);
+
+}
+
+
+
+/* ==========================
+   ESPORTES
+========================== */
+
+#esportes{
+    background:#217C3E;
+    color:#fff;
+    padding:100px 60px;
+}
+
+#esportes h2{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:60px;
+}
+
+.esportes-container{
+    max-width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.esporte-card{
+    background:#111;
+    border:2px solid #2AA344;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.35s;
+}
+
+.esporte-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(42,163,68,.5);
+}
+
+.esporte-card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+.esporte-card h3{
+    color:#2AA344;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.esporte-card p{
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.esporte-card a{
+    display:inline-block;
+    padding:12px 22px;
+    background:#217C3E;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.esporte-card a:hover{
+    background:#2AA344;
+}
+
+/*====================
+    LUGARES
+====================*/
+
+.locais{
+    width:90%;
+    margin:50px auto;
+    padding:30px;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+
+    background:#111;
+    border:2px solid #217C3E;
+    border-radius:20px;
+}
+
+.locais h3{
+    width:100%;
+    text-align:center;
+    color:#2AA344;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.locais img{
+    width:45% !important;
+    max-width:600px;
+    height:350px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.locais iframe{
+    width:45%;
+    max-width:600px;
+    height:350px;
+    border:none;
+    border-radius:15px;
+}
+
+.locais a{
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+    color:#fff;
+    text-decoration:none;
+}
+
+.locais a:hover{
+    color:#2AA344;
+}
+
+#lugares, #lugares-que-quero{
+    padding-top: 120px;
+    text-align: center;
+    font-size: 48px;
+}
+
+footer hr{
+    background-color: #000;
+}
+
+footer{
+    background-color: #217C3E;
+    color: #000;
+    font-size: 19px;
+    text-align: center;
+}
